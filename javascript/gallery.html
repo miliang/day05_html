@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+    <!--标题-->
+    <h1>Snapshots</h1>
+    <!--无序列表-->
+    <ul>
+        <li>
+            <!--a标签跳转页面 显示图片 return false：阻止页面跳转-->
+            <a href="images/background_1.jpg" title="说什么不重要，重要是谁说的" onclick="showPic(this);return false;">熊猫</a>
+        </li>
+        <li>
+            <!--a标签跳转页面 显示图片 return false：阻止页面跳转-->
+            <a href="images/background_2.jpg" title="中秋" onclick="showPic(this);return false;">中秋</a>
+        </li>
+        <li>
+            <!--a标签跳转页面 显示图片 return false：阻止页面跳转-->
+            <a href="images/background_3.jpg" title="一颗开花的树" onclick="showPic(this);return false;">树</a>
+        </li>
+        <li>
+            <!--a标签跳转页面 显示图片 return false：阻止页面跳转-->
+            <a href="images/background_4.jpg" title="蒲公英" onclick="showPic(this);return false;">蒲公英</a>
+        </li>
+    </ul>
+    <!--点击显示标题下的图片-->
+    <img id="placeholder" src="images/placeholder.png" alt="my image gallery" />
+    <!--显示图片的描述-->
+    <p id="description">Choose an image</p>
+    <!--调用js文件-->
+    <script src="scripts/showPic.js"></script>
+</body>
+</html>

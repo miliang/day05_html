@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+</head>
+<body>
+    <div id="div1" class="red">div1里的测试文本</div>
+    <div id="div2" class="red"></div>
+    <h1>我是标题</h1>
+    测试文本
+    <form action="#">
+        <input type="radio" name="test" id="myinput">
+        <input type="radio" name="test">
+    </form>
+<!--伪协议  通过连接调用javascript函数-->
+    <!--<a href="javascript:popUp('http://localhost:8088/javascript/dome.html');">example</a>-->
+    <!--内嵌事件处理函数-->
+    <a href="#" onclick="popUp('http://localhost:8088/javascript/dome.html');return false;">RETURN</a>
+<!--因为使用了return false语句，所以这个链接不会真的被打开，“#”符号是一个仅供文档内部使用的链接记号。在某些浏览器中
+“#”链接指向当前文档的开头-->
+    <!--以上两种方法都没办法实现平稳退化-->
+    <script>
+        /*查询是否有子节点，返回TRUE or FALSE*/
+        var haschildNodes = document.body.hasChildNodes();
+        console.log(haschildNodes);
+        /*查询是否有子节点*/
+        var mychildNodes = document.body.childNodes;
+        console.log(mychildNodes);
+        console.log(mychildNodes.length);
+        /*进入页面打开一个新的窗口*/
+        function popUp(winUrl) {
+            window.open(winUrl,"popup","width=320,height=480");
+        }
+       
+    </script>
+</body>
+</html>

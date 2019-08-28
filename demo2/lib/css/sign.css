@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.home {
+    width: 100%;
+}
+
+.thead {
+    width: 100%;
+}
+
+.thead li {
+    float: left;
+    width: 14.28%;
+    text-align: center;
+}
+
+.home tbody>tr>td {
+    width: 14.28%;
+    height: 40px;
+    background: #ececec;
+    text-align: center;
+}
+
+button{
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    float: left;
+}
+
+#month {
+    text-align: center;
+}
+
+.qiandao {
+    color: red;
+}

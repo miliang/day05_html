@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <style type="text/css">
+        #myelement{
+            position: absolute;
+            left:50px;
+            top:100px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div id="myelement">This is my element</div>
+    <script type="text/javascript">
+        var myelement=document.getElementById("myelement");
+        myelement.style.left="100px";
+        myelement.style.top="150px";
+
+        //        var xpos = document.layers['myelement'].left; //Netscape公司
+//        var xpos = document.all['myelement'].lefttops; //IE4
+//        var xpos = document.getElementById('myelement').style.left;//标准化DOM
+
+        /*字符串*/
+        var mood = "don't ask";
+        console.log(mood);
+        var height = "about 5'10\" tall";
+        console.log(height);
+        /*数组*/
+        var beatles = ["John","Paul","George","Ringo"];
+        var years = [1940,1941,1942,1943];
+        var lennon = ["John",1940,false];
+        console.log(beatles);//["John","Paul",George","Ringo"]
+        var name = "John";
+        beatles[0]=name;
+        console.log(beatles);//["John","Paul",George","Ringo"]
+        console.log(typeof beatles);//object
+        var names = ["Ringo","John","George","Paul"];
+        beatles[0]=names[3];
+        console.log(beatles);//["Paul","Paul",George","Ringo"]
+        console.log(typeof beatles);//object
+        var lennon = ["John",1940,false];
+        var beatles = [];
+        beatles[0]=lennon;
+        console.log(beatles);//["John",1940,false]
+        console.log(typeof beatles);//object
+        /*关联数组*/
+        var lennon = Array();
+        lennon["name"] = "John";
+        lennon["year"] = 1940;
+        lennon["living"] = false;
+        console.log(lennon);//[name:"John",year:1940,living:false]
+        console.log(typeof lennon);//object
+
+        /*对象*/
+        var lennon = Object();
+        lennon.name = "John";
+        lennon.year = 1940;
+        lennon.living = false;
+        console.log(lennon);//{name:"John",year:1940,living:false}
+        console.log(typeof lennon);//object
+        var beatles={};
+        beatles.vocalist = lennon;
+        console.log(beatles);//{vocalist{name:"John",year:1940,living:false}}
+        console.log(typeof beatles);//object
+
+        /*操作*/
+//        alert(1+4);//5
+//        alert(1+4*5);//21
+//        alert((1+4)*5);//25
+
+        var temp_fahrenheit = 95;
+        var temp_celsius = (temp_fahrenheit - 32)/1.8;
+        console.log(temp_celsius);//35
+
+        var mood = "happy";
+        var message = "I am feeling " + mood;
+        console.log(message);//I am feeling happy
+
+//        alert("10"+20);//1020
+//        alert(10+20);//30
+
+        var year = "2018";
+        var mess = "This year is ";
+        mess += year;
+        console.log(mess);//This year is 2018
+
+        /*循坏*/
+        /*while*/
+        /*var count = 1;
+        while(count<11){
+            alert(count);
+            count++;
+        }*/
+
+        /*do ... while 至少执行1次*/
+//        var count = 1;
+//        do{
+//            console.log(count);//1 2 3 4 5 6 7 8 9 10
+//            count++;
+//        }while (count < 11 );
+//
+
+        var count = 1;
+        do{
+            console.log(count);//1
+            count++;
+        }while (count < 1 );
+
+        function convertToCelsius(temp) {
+            var result = temp - 32;
+            result = result / 1.8;
+            return result;
+        }
+        var temp_fahrenheit = 95;
+        var temp_celsius = convertToCelsius(temp_fahrenheit);
+        console.log(temp_celsius);//35
+
+        /*作用域*/
+//        function square(num) {
+//            total = num * num;
+//            return total;
+//        }
+//        var total = 50;
+//        var number = square(20);
+//        console.log(total);//400
+        function square(num) {
+            var total = num * num;
+            return total;
+        }
+        var total = 50;
+        var number = square(20);
+        console.log(number);//400
+        console.log(total);//50
+    </script>
+</body>
+</html>
